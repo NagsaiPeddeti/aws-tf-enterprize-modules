@@ -25,6 +25,12 @@ variable "private_subnets" {
 }
 
 
+variable "teams" {
+  description = "List of private subnet names"
+  type        = list(string)
+  default     = ["product", "operations"]
+}
+
 variable "public_subnets" {
   description = "List of public subnet CIDRs"
   type        = list(string)
